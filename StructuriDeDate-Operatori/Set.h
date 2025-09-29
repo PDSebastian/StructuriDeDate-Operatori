@@ -40,10 +40,8 @@ public:
 			head = head->getNext();
 			delete aux;
 		
-		
 		}
-		Node<T>aux = head;
-
+		return *this;
 	}
 	friend ostream& operator<<(ostream& os, const Set<T>set){
 	Node<T>*aux = set.head;
