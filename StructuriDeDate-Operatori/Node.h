@@ -2,12 +2,12 @@
 #include<iostream >
 using namespace std;
 template <typename T>
-
 class Node
 {
 	Node<T>* next;
 	T data;
 public:
+
 	Node(T data, Node<T>* next) {
 		this->next = next;
 		this->data = data;
@@ -19,7 +19,7 @@ public:
 	void setNext(Node* next) {
 		this->next = next;
 	}
-	T getData() {
+	T& getData()  {
 		return data;
 	}
 	Node* getNext() {

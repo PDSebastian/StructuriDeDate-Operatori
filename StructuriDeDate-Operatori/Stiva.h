@@ -1,7 +1,8 @@
 #pragma once
 #include "Node.h"
+#include "Lista.h"
 template <typename T>
-class Stiva
+class Stiva:public Lista<T>
 {
 	Node<T>* head;
 public:
@@ -34,7 +35,24 @@ public:
 
 	}
 	
+	void push(const T& elem) {
+		this->addStart(elem);
+	}
+	T top() const {
+		return this->back();
+	}
+	void pop() {
+		return this->deleteNode(0);
 
+	}
+	int size() const {
+		return Lista<T>::size();
+	}
+	bool isEmpty() const {
+		return this->size() == 0;
+
+	}
+	
 
 
 

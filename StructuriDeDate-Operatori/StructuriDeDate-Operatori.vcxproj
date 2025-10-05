@@ -123,6 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Peer.cpp" />
     <ClCompile Include="Persoana.cpp" />
     <ClCompile Include="Service.cpp" />
     <ClCompile Include="Set.cpp" />
@@ -133,6 +134,8 @@
     <ClCompile Include="StructuriDeDate-Operatori.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Dictionar.h" />
+    <ClInclude Include="Pair.h" />
     <ClInclude Include="Persoana.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="Set.h" />

@@ -1,7 +1,8 @@
 #pragma once
 #include "Node.h"
+#include "Lista.h"
 template <typename T>
-class Set
+class Set:public Lista<T>
 {
 	Node<T>* head;
 public:
@@ -51,5 +52,42 @@ public:
 		}
 	return os;
 	}
+
+	bool existaElem(const T& elem) {
+		Node<T>* aux = this->head;
+		while (aux) {
+			if (aux->getData() == elem) {
+				return true;
+
+			}
+			aux = aux->getNext();
+		}
+		return false;
+	}
+	void pushElem(const T& elem) {
+		if (!contine(elem)) {
+			this->addEnd(elem);
+
+		}
+	}
+	void popElem(const T& elem) {
+		Node<T>* aux = this->head;
+		int i = 0;
+		while (aux != NULL) {
+			if (aux->getData() == elem) {
+				this->deleteNode(i);
+				return;
+			}
+			aux = aux->getNext();
+			i++;
+		}
+	}
+	int size()const {
+		return Lista<T>::size();
+	}
+	bool isEmpty()const {
+		return Lista<T>::size() == 0;
+	}
+	
 };
 

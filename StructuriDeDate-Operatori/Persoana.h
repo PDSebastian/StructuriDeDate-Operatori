@@ -1,5 +1,5 @@
 #pragma once
-#include<iostream>
+#include <iostream>
 using namespace std;
 class Persoana
 {
@@ -12,14 +12,19 @@ public:
 	}
 	Persoana() {};
 	~Persoana() {};
-
+	
 	string getNume() const {
 		return nume;
 	}
 	int getVarsta() const {
 		return varsta;
 	}
-
+	friend ostream& operator<<(ostream& os, const Persoana& p) {
+		os << p.nume << endl;
+		os << p.varsta << endl;
+	
+		return os;
+	}
 
 };
 

@@ -1,7 +1,8 @@
 #pragma once
 #include"Node.h"
+#include "Lista.h"
 template<typename T>
-class Coada
+class Coada:public Lista<T>
 {
 	Node<T>* head;
 public:
@@ -44,5 +45,24 @@ public:
 
 	}
 	
+	void push(const T& val) {
+		this->addEnd(val);
+	}
+	void pop() {
+		this->deleteNode(0);
+	}
+	T front() const {
+		return Lista<T>::front();
+	}
+	T back() const {
+		return Lista<T>::back();
+	}
+	int size() const {
+		return Lista<T>::size();
+	}
+	bool isEmpty() const {
+		return this->size() == 0;
+	}
+
 };
 
