@@ -25,6 +25,8 @@ public:
 	
 		return os;
 	}
-
+	bool operator==(const Persoana& pers) {
+		return (this->nume == pers.nume );
+	}
 };
 

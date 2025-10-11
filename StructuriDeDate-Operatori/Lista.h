@@ -148,6 +148,8 @@ public:
 		}
 		return ct;
 	}
-
+	Node<U>* getHead()const {
+		return this->head;
+	}
 };
 

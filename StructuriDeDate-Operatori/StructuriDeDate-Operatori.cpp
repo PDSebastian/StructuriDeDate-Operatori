@@ -7,26 +7,25 @@
 
 int main()
 {
-	//Map<string, int >* map = new Map<string, int>();
-	////map->insert("Jenny", 22);
-	////map->insert("Liam", 24);
-	//Lista<Pair<string, int>> lista;
-	//lista.addStart(Pair<string, int>("Ana", 20));
-	//lista.addEnd(Pair<string, int>("Bob", 25));
-	//lista.pushFront(Pair<string, int>("Carol", 30));
-	//lista.pushBack(Pair<string, int>("David", 22));
+	Map<string, Persoana>* map = new Map<string, Persoana>();
 
-	//lista + Pair<string, int>("Carol", 30);
-	//cout << lista << endl;
-	//cout << "////////////////////////////" << endl;
-	Coada<Pair<string, int>>* coada = new Coada<Pair<string, int>>();
-	coada->push(Pair<string, int>("Ana", 20));
-	coada->push(Pair<string, int>("Bob", 25));
-	coada->push(Pair<string, int>("Carol", 30));
-	coada->push(Pair<string, int>("David", 22));
+	Persoana *p1=new Persoana ("Ana", 20);
+	Persoana *p2=new Persoana("Andrei", 30);
+	Persoana *p3=new Persoana("Cosmin", 40);
 
-	cout << *coada << endl;
+	map->insert("Ana", *p1);
+	map->insert("Andrei", *p2);
+	map->insert("Cosmin", *p3);
 
+
+	cout << map->get("Ana") << endl;
+	cout << map->get("Andrei") << endl;
+	cout << map->get("Cosmin") << endl;
+	
+	if (map->find("Cosmin") == *p3) {
+		cout << "Pers gasita" << endl;
+	}
+	
 
 }
 
