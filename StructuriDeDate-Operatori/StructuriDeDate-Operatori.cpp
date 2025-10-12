@@ -25,8 +25,10 @@ int main()
 	if (map->find("Cosmin") == *p3) {
 		cout << "Pers gasita" << endl;
 	}
-	
-
+	cout << endl;
+	cout << "Keys: " << map->getKeys() << endl;
+	cout << "Values: " << map->getValue() << endl;
+	cout << "Pairs: " << map->getPairs() << endl;
 }
 
 

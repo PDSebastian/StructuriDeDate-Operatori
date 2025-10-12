@@ -20,9 +20,8 @@ public:
 		return varsta;
 	}
 	friend ostream& operator<<(ostream& os, const Persoana& p) {
-		os << p.nume << endl;
-		os << p.varsta << endl;
-	
+		os << p.nume << " ";
+		os<< p.varsta << " ";
 		return os;
 	}
 	bool operator==(const Persoana& pers) {

@@ -26,8 +26,8 @@ public:
 		value = val;
 	}
 	friend ostream& operator<<(ostream& os, const Pair<K, V>& p) {
-		os << p.key << endl;
-		os << p.value << endl;
+		os << p.key << " ";
+		os << p.value << " ";
 		return os;
 	}
 
