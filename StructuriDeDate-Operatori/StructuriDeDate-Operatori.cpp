@@ -9,7 +9,7 @@ int main()
 {
 	Map<string, Persoana>* map = new Map<string, Persoana>();
 
-	Persoana *p1=new Persoana ("Ana", 20);
+	/*Persoana *p1=new Persoana ("Ana", 20);
 	Persoana *p2=new Persoana("Andrei", 30);
 	Persoana *p3=new Persoana("Cosmin", 40);
 
@@ -28,7 +28,9 @@ int main()
 	cout << endl;
 	cout << "Keys: " << map->getKeys() << endl;
 	cout << "Values: " << map->getValue() << endl;
-	cout << "Pairs: " << map->getPairs() << endl;
+	cout << "Pairs: " << map->getPairs() << endl;*/
+
+	cout << map->empty() << endl;
 }
 
 

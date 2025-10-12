@@ -99,7 +99,38 @@ public:
 		 }
 		 return pairs;
 	 }
+	 bool empty() {
+		 for (int i = 0; i < size; i++) {
+			 if (lista[i]->getHead() != NULL) {
+				 return false;
+			 }
 
+		 }
+		 return true;
+
+	 }
+	
+	/* V sterge(const K& key) {
+		 Lista<Pair<K, V>>* li = lista[hashKey(key)];
+		 Node<Pair<K, V>>* current = li->getHead();
+		 Node<Pair<K, V>>* aux  = NULL;
+		 while (current) {
+			 if (current->getData().getKey() == key) {
+				aux->setNext(aux->getNext());
+				 delete aux;
+			 
+			 }
+			 aux = current;
+			 current = current->getNext();
+
+		 
+		 }
+	 
+	 
+	 
+	 
+	 }*/
+	 
 
 
 
