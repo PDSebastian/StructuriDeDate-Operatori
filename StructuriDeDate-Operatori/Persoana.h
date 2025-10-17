@@ -21,7 +21,7 @@ public:
 	}
 	friend ostream& operator<<(ostream& os, const Persoana& p) {
 		os << p.nume << " ";
-		os<< p.varsta << " ";
+		os<< p.varsta << " ani";
 		return os;
 	}
 	bool operator==(const Persoana& pers) {

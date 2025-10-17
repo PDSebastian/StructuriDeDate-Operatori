@@ -9,7 +9,7 @@ int main()
 {
 	Map<string, Persoana>* map = new Map<string, Persoana>();
 
-	/*Persoana *p1=new Persoana ("Ana", 20);
+	Persoana *p1=new Persoana ("Ana", 20);
 	Persoana *p2=new Persoana("Andrei", 30);
 	Persoana *p3=new Persoana("Cosmin", 40);
 
@@ -18,19 +18,25 @@ int main()
 	map->insert("Cosmin", *p3);
 
 
+	//cout << *map << endl;
+	Map<string, Persoana>* map2 = new Map<string, Persoana>();
+	Persoana* p4 = new Persoana("Sebastian", 19);
+	Persoana* p5 = new Persoana("Cristi", 40);
+
+	map2->insert("Sebastian", *p4);
+	map2->insert("Cristi", *p5);
+
+	*map + *map2;
 	cout << map->get("Ana") << endl;
 	cout << map->get("Andrei") << endl;
 	cout << map->get("Cosmin") << endl;
-	
-	if (map->find("Cosmin") == *p3) {
-		cout << "Pers gasita" << endl;
-	}
-	cout << endl;
-	cout << "Keys: " << map->getKeys() << endl;
-	cout << "Values: " << map->getValue() << endl;
-	cout << "Pairs: " << map->getPairs() << endl;*/
+	cout << map->get("Sebastian") << endl;
+	cout << map->get("Cristi") << endl;
 
-	cout << map->empty() << endl;
+	cout << endl;
+
+	
+
 }
 
 

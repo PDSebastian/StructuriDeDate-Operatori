@@ -109,35 +109,57 @@ public:
 		 return true;
 
 	 }
-	
-	/* V sterge(const K& key) {
-		 Lista<Pair<K, V>>* li = lista[hashKey(key)];
-		 Node<Pair<K, V>>* current = li->getHead();
-		 Node<Pair<K, V>>* aux  = NULL;
-		 while (current) {
-			 if (current->getData().getKey() == key) {
-				aux->setNext(aux->getNext());
-				 delete aux;
-			 
+	 int sterge(K key) {
+		 Lista<Pair<K, V>>* l = lista[hashKey(key)];
+		 Node<Pair<K, V>>* aux = l->getHead();
+		 int i = 0;
+		 while (aux) {
+			 if (aux->getData().getKey() == key) {
+				 l->deleteNode(i);
+				 return 1;
 			 }
-			 aux = current;
-			 current = current->getNext();
+			 aux = aux->getNext();
+			 i++;
 
-		 
+
 		 }
+		 return 0;
 	 
-	 
-	 
-	 
-	 }*/
-	 
+	 }
 
+	 friend ostream& operator<<(ostream& os, const Map<K, V>& m) {
+		
+		 for (int i = 0; i < m.size; i++) {
+			 Node<Pair<K, V>>* aux = m.lista[i]->getHead();
+			 while (aux) {
+				
+				 os << aux->getData().getKey() << "; " << aux->getData().getValue();
+				 aux = aux->getNext();
+			 }
+		 }
+		
+		 return os;
+	 }
+	 Map<K, V>& operator+(const Map<K, V>& map) {
+		 for (int i = 0; i < map.size; i++) {
+			 Node<Pair<K, V>>* aux = map.lista[i]->getHead();
+			 while (aux) {
+				 insert(aux->getData().getKey(), aux->getData().getValue());
+				 aux = aux->getNext();
+			 }
+		 }
+		 return *this;
 
-
-
-
-
-
-
+	 }
+	 Map<K, V>& operator-(const Map<K, V>& map) {
+		 for (int i = 0; i < map.size; i++) {
+			 Node<Pair<K, V>>* aux = map.lista[i]->getHead();
+			 while (aux) {
+				 sterge(aux->getData().getKey());
+				 aux = aux->getNext();
+			 }
+		 }
+		 return *this;
+	 }
 
 };
