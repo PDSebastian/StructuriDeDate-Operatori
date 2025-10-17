@@ -33,7 +33,7 @@ int main()
 	cout << map->get("Sebastian") << endl;
 	cout << map->get("Cristi") << endl;
 
-	cout << endl;
+	
 
 	
 
