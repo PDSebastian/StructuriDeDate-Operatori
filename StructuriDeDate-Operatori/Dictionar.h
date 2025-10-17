@@ -126,7 +126,6 @@ public:
 		 return 0;
 	 
 	 }
-
 	 friend ostream& operator<<(ostream& os, const Map<K, V>& m) {
 		
 		 for (int i = 0; i < m.size; i++) {
@@ -162,7 +161,7 @@ public:
 		 return *this;
 	 }
 
-
+	 
 
 
 

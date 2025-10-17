@@ -27,7 +27,7 @@ public:
 	void afisarePozeUser(User u) {
 		Lista<Photos>l = data.get(u);
 		Node<Photos>* aux = l.getHead();
-		cout << "Poze user " << u.getUsername() << endl;
+		cout << "Poze user: " << u.getUsername() << endl;
 		while (aux) {
 			cout << aux->getData() << endl;
 			aux = aux->getNext();
