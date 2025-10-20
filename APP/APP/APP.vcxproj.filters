@@ -27,6 +27,21 @@
     <ClCompile Include="Photos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Comments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Like.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Follows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Photo_tags.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h">
@@ -48,6 +63,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Photos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Comments.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Like.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Follows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tags.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Photo_tags.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

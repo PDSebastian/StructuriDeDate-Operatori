@@ -2,10 +2,14 @@
 #include "Photos.h"
 #include "Lista.h"
 #include "Map.h"
+#include"Comments.h"
+#include"Like.h"
+#include"Follows.h"
+template<typename T>
 class Service
 {
 private: 
-	Map<User, Lista<Photos>> data;
+	Map<User, Lista<T>> data;
 public:
 	Service() {};
 	~Service() {};
@@ -14,33 +18,23 @@ public:
 			return false;
 		}
 		else {
-			Lista<Photos> *lista = new Lista<Photos>();
+			Lista<T> *lista = new Lista<T>();
 			data.insert(user, *lista);
 			return true;
 		}
 	}
-	void addPhotos(User u ,Photos p) {
-		Lista<Photos> l = data.get(u);
-		l.addEnd(p);
-		data.insert(u, l);
-	}
-	void afisarePozeUser(User u) {
-		Lista<Photos>l = data.get(u);
-		Node<Photos>* aux = l.getHead();
-		cout << "Poze user: " << u.getUsername() << endl;
-		while (aux) {
-			cout << aux->getData() << endl;
-			aux = aux->getNext();
-		}
-	
-	
+	void add(const User& u , const T& p) {
+		Lista<T> lista = data.get(u);
+		lista.addEnd(p);
+		data.insert(u, lista);
 	}
 
+	void userContent( User u)  {
+		cout<<data.get(u);
 
-
-
-
-
+	
+	}
+	
 
 
 };
