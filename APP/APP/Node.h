@@ -26,7 +26,11 @@ public:
 		return next;
 
 	}
-
+	friend ostream& operator<<(ostream& os, Node& n) {
+		os << n.getData() << endl;
+		os << n.getNext() << endl;
+		return os;
+	}
 
 
 

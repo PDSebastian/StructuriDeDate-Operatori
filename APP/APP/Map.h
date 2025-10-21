@@ -5,6 +5,7 @@
 template <typename K, typename V>
 class Map {
 	Lista<Pair<K, V>>** lista;
+	
 	size_t size = 5;
 public:
 	Map(size_t size = 5) : size(size) {
@@ -21,8 +22,6 @@ public:
 		lista[i]->addEnd(Pair<K, V>(key, val));
 
 	}
-
-	
 	V get(const K& key) {
 		Lista<Pair<K, V>>* li = lista[hashKey(key)];
 
@@ -122,6 +121,11 @@ public:
 
 		}
 		return 0;
+
+	}
+	Node<Pair<K, V>>*getHead() {
+		return this->head;
+
 
 	}
 	friend ostream& operator<<(ostream& os, const Map<K, V>& m) {

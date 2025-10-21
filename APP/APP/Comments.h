@@ -51,5 +51,14 @@ public:
 	string getCommentText() {
 		return comment_text;
 	}
+	friend ostream& operator<<(ostream& os, Comments& c) {
+		os << c.photo_id << endl;
+		os << c.comment_text << endl;
+		os << c.created_at << endl;
+		os << c.user_id << endl;
+		return os;
+
+	
+	}
 };
 

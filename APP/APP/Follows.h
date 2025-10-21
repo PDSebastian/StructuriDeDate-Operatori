@@ -34,7 +34,12 @@ public :
 	string getCreatedAT()const {
 		return created_at;
 	}
-
+	friend ostream& operator<<(ostream& os, Follows& f) {
+		os << f.created_at << endl;
+		os << f.followee_id << endl;
+		os << f.follower_id << endl;
+		return os;
+	}
 
 
 

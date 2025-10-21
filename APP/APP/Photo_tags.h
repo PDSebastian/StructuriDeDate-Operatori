@@ -26,7 +26,11 @@ public:
 		return tag_id;
 
 	}
-
+	friend ostream& operator<<(ostream& os, Photo_tags& p) {
+		os << p.photo_id << endl;
+		os << p.tag_id << endl;
+		return os;
+	}
 
 };
 

@@ -34,5 +34,11 @@ public:
 	string getCreatedAt() const {
 		return created_at;
 	}
+	friend ostream& operator<<(ostream& os, Tags& t) {
+		os << t.created_at << endl;
+		os << t.tag_name << endl;
+		os << t.idTags << endl;
+		return os;
+	}
 };
 

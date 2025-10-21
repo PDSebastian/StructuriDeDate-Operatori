@@ -50,9 +50,13 @@ int main()
 
 
 
-	s->userContent(*u1);
+	//s->userContent(*u1);
 
+	//s->showPhotos(*u2);
+	//s->findUSerID(*u2, 10);
+	//s->deleteUserID(*u2, 12);
 
+	s->showComments(*u2);
 
 
 

@@ -150,5 +150,5 @@ public:
 	Node<U>* getHead()const {
 		return this->head;
 	}
-
+	
 };

@@ -5,6 +5,7 @@
 #include"Comments.h"
 #include"Like.h"
 #include"Follows.h"
+#include "Pair.h"
 template<typename T>
 class Service
 {
@@ -34,8 +35,78 @@ public:
 
 	
 	}
-	
+	void showPhotos(User u) {
+		Lista<T>l = data.get(u);
+		Node<T>* aux = l.getHead();
+		if (aux == NULL) {
+			cout << "User" << u.getUsername() << " nu are poze " << endl;
+		}
+		while (aux != NULL) {
+			cout << aux->getData() << endl;
+			aux = aux->getNext();
+		}
 
+
+	}
+	void findUSerID(User u, int id) {
+		Lista<T>l = data.get(u);
+		Node<T>* aux = l.getHead();
+		while (aux != NULL) {
+			if (u.getID() == id) {
+				cout << "user gasit " << endl;
+				
+			}
+			else {
+				cout << "user nu a fost gasit " << endl;
+			}
+			aux = aux->getNext();
+		
+		}
+	
+	
+	
+	
+	}
+	void deleteUserID(User u, int id) {
+		Lista<T>l = data.get(u);
+		Node<T>*aux = l.getHead();
+		int poz = 0;
+		
+		while (aux) {
+			if (aux->getData().getID() == id) {
+				l.deleteNode(poz);
+
+			
+			
+			}
+			aux = aux->getNext();
+			poz++;
+		
+		
+		
+		
+		}
+		
+	
+	
+	
+	}
+	void showComments(User u)  {
+		Node<Pair<User, Lista<T>>>* aux = data.getHead();
+		Lista<T>l = data.get(u);
+		Node<T>* node = l.getHead();
+		while (aux) {
+			cout << aux->getData() << endl;
+			node = node->getNext();
+		
+		
+		
+		}
+		aux = aux->getNext();
+		 
+	
+	
+	}
 
 };
 

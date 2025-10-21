@@ -12,7 +12,7 @@ public:
 		this->user_id = user_id;
 		this->photo_id = photo_id;
 		this->created_at = created_at;
-	
+
 	}
 	~Like() {};
 	void setUserID(int user_id) {
@@ -25,7 +25,7 @@ public:
 		this->created_at = created_at;
 	}
 
-	int getUserID() const{
+	int getUserID() const {
 		return user_id;
 	}
 	int getPhotoID()const {
@@ -34,6 +34,11 @@ public:
 	string getCreatedAt()const {
 		return created_at;
 	}
-
+	friend ostream& operator<<(ostream& os, Like& l) {
+		os << l.created_at << endl;
+		os << l.photo_id << endl;
+		os << l.user_id << endl;
+		return os;
+	}
 };
 

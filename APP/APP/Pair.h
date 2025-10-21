@@ -30,4 +30,5 @@ public:
 		os << p.value << " ";
 		return os;
 	}
+
 };

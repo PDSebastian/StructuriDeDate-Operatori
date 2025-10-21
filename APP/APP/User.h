@@ -36,6 +36,11 @@ public:
     bool operator!=(const User& user) const {
         return !(*this == user);
     }
+    friend ostream& operator<<(ostream& os, User& u) {
+        os << u.id << endl;
+        os << u.username << endl;
+        return os;
+    }
 };
 
 namespace std {
