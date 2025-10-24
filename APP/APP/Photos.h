@@ -47,6 +47,12 @@ public:
 		return os;
 	
 	}
+	bool operator==(const Photos& p) const {
+		return this->photoID == p.photoID;
+	}
+	bool operator!=(const Photos& p) const {
+		return !(*this == p);
+	}
 
 };
 

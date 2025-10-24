@@ -40,5 +40,6 @@ public:
 		os << t.idTags << endl;
 		return os;
 	}
+	
 };
 

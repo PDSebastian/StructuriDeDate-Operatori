@@ -34,13 +34,19 @@ public :
 	string getCreatedAT()const {
 		return created_at;
 	}
+	bool operator==(const Follows& f) const {
+		return this->follower_id == f.follower_id && this->followee_id == f.followee_id;
+	}
+	bool operator!=(const Follows& f) const {
+		return !(*this ==f);
+	}
 	friend ostream& operator<<(ostream& os, Follows& f) {
 		os << f.created_at << endl;
 		os << f.followee_id << endl;
 		os << f.follower_id << endl;
 		return os;
 	}
-
+	
 
 
 

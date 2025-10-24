@@ -37,10 +37,11 @@ public:
         return !(*this == user);
     }
     friend ostream& operator<<(ostream& os, User& u) {
-        os << u.id << endl;
-        os << u.username << endl;
+        os << u.getID() << endl;
+        os << u.getUsername() << endl;
         return os;
     }
+   
 };
 
 namespace std {
